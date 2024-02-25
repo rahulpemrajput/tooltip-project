@@ -1,0 +1,31 @@
+/* Tooltip.css */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    visibility: hidden;
+  }
+  .hoverable-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    border-bottom: 1px dotted black;}
+  .tooltip-right {
+    top: 50%;
+    left: calc(100% + 10px);
+    transform: translateY(-50%);
+  }
+  
+  .tooltip-container:hover .tooltip {
+    visibility: visible;
+  }
+  
